@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*这样 的注释是会编译在css文件当中的*/
+/*变量*/
+/*怎么申明一个变量 var a=10;*/
+a {
+  color: #333;
+  background: #e92322;
+}
+/*======混入==========*/
+/*=======1类混入====*/
+.c_red {
+  color: red;
+}
+.b_red {
+  border: 1px solid red;
+}
+.colorAndBorderRed {
+  color: red;
+  border: 1px solid red;
+}
+/*=====2.函数混入====*/
+/*不会在css编译，但是可以在less中用*/
+.colorAndBorderRedFunc {
+  background: #e92322;
+  color: red;
+  border: 1px solid red;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+/*====嵌套====*/
+.wjs_app {
+  position: relative;
+  z-index: 10000;
+  /*紧跟上一层元素用&*/
+}
+.wjs_app img {
+  display: none;
+}
+.wjs_app:hover img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  margin-left: -60%;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+/*=====导入===*/
+/*申明变量*/
+/*申明函数*/
+/*====函数与运算====*/
+.gray {
+  color: #999999;
+  background: #808080;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .body{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 1200px;
+            height: 1000px;
+            margin: 0 auto;
+            background: pink;
+        }
+
+        @media screen  and (min-width:1200px ){
+            .box{
+                width: 1170px;
+                background: blue;
+            }
+        }
+        @media screen  and (min-width:992px) and (max-width:1200px  ){
+            .box{
+                width:970px;
+                background: red;
+            }
+        }
+        @media screen  and (min-width:768px) and (max-width:992px  ){
+            .box{
+                width:750px;
+                background: green;
+            }
+        }
+        @media screen  and (max-width:768px) {
+            .box{
+                width: 100%;
+                background: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

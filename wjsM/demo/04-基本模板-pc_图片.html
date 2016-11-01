@@ -1,0 +1,95 @@
+<!--html5 骨架-->
+<!DOCTYPE html>
+<!--语言是中文简体-->
+<html lang="zh-cn">
+<head>
+    <!--指定当前页面的字符编码-->
+    <meta charset="utf-8">
+    <!--指定当前浏览器 如果是IE浏览器的时候 用最新的渲染引擎来渲染  edge ie的新版本-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--指定viewport 响应移动端  必须设置viewport  设置才标准格式  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <!--标题-->
+    <title>基本模版</title>
+
+    <!-- 引用bootstrap核心css文件 -->
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- 如果你需要在IE低版本浏览器 需要两个插件 -->
+    <!--
+        1.html5shiv  html5标签兼容
+        2.respond   不支持media query 的时候   兼容
+    -->
+    <!-- 注意：respond.js  必须在http形式下访问的时候才生效 -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- carousel 是轮播图初始化 -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!--点盒子-->
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <!--
+            data-target 当前的元素控制的目标是什么   控制的那个轮播图
+            data-slide-to  点这个点会切换到那个图片  通过索引来控制
+        -->
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+    <!--图片盒子-->
+    <style>
+        .pc_img{
+            display: block;
+            width: 100%;
+            height: 410px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="#" class="pc_img" style="background-image: url(../images/slide_01_2000x410.jpg)">
+            </a>
+        </div>
+        <div class="item">
+            <a href="#" class="pc_img" style="background-image: url(../images/slide_02_2000x410.jpg)">
+
+            </a>
+        </div>
+        <div class="item">
+            <a href="#" class="pc_img" style="background-image: url(../images/slide_03_2000x410.jpg)">
+            </a>
+        </div>
+        <div class="item">
+            <a href="#" class="pc_img" style="background-image: url(../images/slide_04_2000x410.jpg)">
+
+            </a>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
